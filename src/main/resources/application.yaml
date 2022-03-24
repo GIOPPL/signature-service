@@ -1,0 +1,5 @@
+preread:
+  uploadPath: /media/image
+#  uploadPath: D:/JavaProject22/signature2/src/main/resources/upload/
+server:
+  port: 8080
