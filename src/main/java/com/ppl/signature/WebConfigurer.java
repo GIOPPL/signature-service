@@ -25,6 +25,8 @@ public class WebConfigurer extends WebMvcConfigurerAdapter {
     PreReadUploadConfig uploadConfig;
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**").addResourceLocations("file:///"+uploadConfig.getUploadPath());
+        registry.addResourceHandler("/static/**")
+                .addResourceLocations("file:"+uploadConfig.getUploadPath()+"/");
+        super.addResourceHandlers(registry);
     }
 }

@@ -7,6 +7,8 @@ package com.ppl.signature;
  */
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 @Component
 @ConfigurationProperties(prefix="preread")
 public class PreReadUploadConfig {
