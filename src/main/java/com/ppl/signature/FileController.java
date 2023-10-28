@@ -35,9 +35,8 @@ public class FileController {
 
         try {
             //指定上传的位置为 d:/upload/
-//            String path = "D:/JavaProject22/signature2/src/main/resources/upload/SIGN_UPLOAD.jpg";
-//            String path = req.getSession().getServletContext().getRealPath("/SIGN_UPLOAD");
-            String path = "/media/image/SIGN_UPLOAD.jpg";
+            String path = "D:/JTMz_0.1/tomcat/webapps/sign/SIGN_UPLOAD/serve.jpg";
+//            String path = "D:/upload/SIGN_UPLOAD.jpg";
             System.out.println(path);
             log.info("文件路径："+path);
             log.info("文件名："+file.getName());
@@ -61,6 +60,7 @@ public class FileController {
             //告诉页面上传成功了
         } catch (IOException e) {
             e.printStackTrace();
+            return R.error().message(e.getMessage());
             //出现异常，则告诉页面失败
         } finally {
             //无论成功与否，都有关闭输入输出流

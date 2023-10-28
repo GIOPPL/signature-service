@@ -1,6 +1,18 @@
 preread:
-  uploadPath: /media/image
 #  uploadPath: /media/image
-#  uploadPath: D:/JavaProject22/signature2/src/main/resources/upload/
+#  uploadPath: D:/upload/
+  uploadPath: C:/Users/Public/Pictures
 server:
-  port: 8080
+  port: 8081
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB  		# 设置单个文件最大大小为10MB
+      max-request-size: 100MB  	# 设置多个文件大小为100MB
+logging:
+  file:
+    name:  d:/upload/  # 日志文件绝对路径及名称
+  level:
+    root: info #日志级别 root表示所有包，也可以单独配置具体包 fatal>error>warn>info>debug>trace>off
+
